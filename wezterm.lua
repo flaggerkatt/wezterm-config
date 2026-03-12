@@ -4,18 +4,27 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- This is where you actually apply your config choices.
+-- Smooth scrolling
+config.max_fps = 100
 
--- For example, changing the initial geometry for new windows:
+-- Remove extra space
+config.window_padding = {
+	left = 3,
+	right = 3,
+	top = 3,
+	bottom = 3,
+}
+
+-- This is where you actually apply your config choices.
 config.initial_cols = 120
-config.initial_rows = 28
+config.initial_rows = 40
 
 -- or, changing the font size and color scheme.
 config.font_size = 13
 config.font = wezterm.font("Hack Nerd Font Mono")
 config.color_scheme = "rose-pine-moon"
+
 -- default shell
--- Spawn a fish shell in login mode
 config.default_prog = { "/opt/homebrew/bin/zsh", "-l" }
 
 -- Left alt no composition, right alt composition.
