@@ -36,6 +36,7 @@ config.window_decorations = "RESIZE"
 
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.9
+config.quit_when_all_windows_are_closed = false
 
 -- Finally, return the configuration to wezterm:
 return config
